@@ -1,6 +1,6 @@
 
 select 
 * 
-from {{ source('DEMO', 'BIKE1') }} 
+from {{ source('DEMO', 'BIKE') }} 
 
-limit 10
+

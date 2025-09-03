@@ -6,7 +6,7 @@ with bike as (
     start_lat,
     start_lng    
  from 
-{{ source('DEMO', 'BIKE1') }}
+{{ ref('stage_bike') }}
 
 
 

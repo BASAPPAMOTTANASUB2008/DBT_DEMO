@@ -17,12 +17,15 @@ daily_weather_agg as (
     select 
     daily_weather,
     weather,
-    count(weather)
+    count(weather) as weather_count,
+    row_number() over (partition BY daily_weather order by count(weather) desc ) as rownum
     from daily_weather
 
     group by daily_weather, weather
 
+    qualify  row_number() over (partition BY daily_weather order by count(weather) desc ) =1
+
 )
 
 
-Select * from daily_weather_agg
+Select * from daily_weather_agg  

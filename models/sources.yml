@@ -5,5 +5,5 @@ sources:
     database: DEMO
     schema: DEMO_SCHEMA
     tables:
-      - name: BIKE2
+      - name: BIKE
       - name: WEATHER
