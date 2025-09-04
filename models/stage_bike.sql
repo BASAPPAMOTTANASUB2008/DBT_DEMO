@@ -13,6 +13,7 @@ start_lng,
 end_lat,        
 end_lng,        
 member_casual 
-From {{ source('demo', 'bike') }}
+From {{ source('DEMO', 'BIKE') }}
 
 )  select * from BIKE
+

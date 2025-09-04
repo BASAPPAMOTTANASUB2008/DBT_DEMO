@@ -8,8 +8,6 @@ with bike as (
  from 
 {{ ref('stage_bike') }}
 
-
-
 )
 
 select * from bike
